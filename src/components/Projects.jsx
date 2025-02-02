@@ -21,7 +21,7 @@ const Projects = () => {
             {
               title: 'SOEN: AI-Powered Project Management Platform',
               description:
-                'SOEN is a webapplication designed to simplify project-creation, collaboration, and management,featuring AI-assisted coding,real-time chat, file generation,and server control.',
+                'A full-stack platform for project creation, collaboration, AI-assisted coding, and server management.',
               link: 'https://github.com/Karan2834thakar/SOEN.git',
             },
             {
