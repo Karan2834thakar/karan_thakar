@@ -19,6 +19,12 @@ const Projects = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {[
             {
+              title: 'SOEN: AI-Powered Project Management Platform',
+              description:
+                'SOEN is a full-stack web application designed to simplify project creation, collaboration, and management, featuring AI-assisted coding, real-time chat, file generation, and server control.',
+              link: 'https://github.com/Karan2834thakar/SOEN.git',
+            },
+            {
               title: 'Quizee: The Ultimate Quiz Platform',
               description:
                 'Quizee is an interactive and engaging quiz application that allows users to test their knowledge on a wide range of topics.',
@@ -48,12 +54,7 @@ const Projects = () => {
                 'An Employee Management System (EMS) that manages employee data like personal details, attendance, payroll, and other management functionalities.',
               link: 'https://github.com/Karan2834thakar/EMS.git',
             },
-            {
-              title: 'Fake Social-Media Detection',
-              description:
-                'The Fake Social Media Detection project is designed to identify and flag fake accounts or misleading information on social media platforms.',
-              link: 'https://github.com/Karan2834thakar/fake-buster.git',
-            },
+            
           ].map((project, index) => (
             <motion.div
               key={index}
