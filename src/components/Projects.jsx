@@ -18,6 +18,18 @@ const Projects = () => {
       <div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {[
+             {
+              title: 'QP-Predictor: AI-Powered Question Paper Prediction',
+              description:
+                ' A MERN stack-based system that analyzes previous year papers using AI & NLP to predict potential exam questions.',
+              link: 'https://github.com/Karan2834thakar/QP.git',
+            },
+            {
+              title: 'CrickBid –Tournament-Auction,Scoring System',
+              description:
+                ' A MERN stack-based platform for managing cricket tournaments with team auctions,match scheduling, and live scoring.',
+              link: 'https://github.com/Karan2834thakar/Cricket.git',
+            },
             {
               title: 'SOEN: AI-Powered Project Management Platform',
               description:
@@ -39,7 +51,7 @@ const Projects = () => {
             {
               title: 'CodeCraft',
               description:
-                'An application you are developing, though details of the functionality are not specified yet.',
+                'It is an apllication that generates QR-codes for any kind of text.',
               link: 'https://github.com/Karan2834thakar/QR-code-generator.git',
             },
             {
