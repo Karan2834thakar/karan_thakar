@@ -1,5 +1,6 @@
 import React from 'react'
 import Navbar from './components/Navbar'
+import Experience from './components/Experience'
 import Hero from './components/Hero'
 import About from './components/About'
 import Technologies from './components/Technologies'
@@ -17,6 +18,7 @@ const App = () => {
       <Navbar />
       <Hero />
       <About />
+      <Experience />
       <Technologies />
       <Projects />
       <Contect />

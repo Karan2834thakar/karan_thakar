@@ -10,3 +10,14 @@ export const CONTACT = {
   
   email: "karanthakar2834@gmail.com",
 };
+export const EXPERIENCE = [
+  {
+    role: "Full Stack Development Intern",
+    company: "Milliard InfoWord",
+    location: "Rajkot, Gujarat",
+    duration: "3 Months",
+    period: "January 2025 – March 2025", // update if months differ
+    technologies: ["MongoDB", "Express.js", "React", "Node.js"],
+    description: `Completed a 3-month full stack development internship focused on building scalable web applications using the MERN stack. Worked on both front-end and back-end components, contributed to real-world projects, and gained hands-on experience in collaborative software development practices.`,
+  }
+];

@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { HERO_CONTENT } from '../constants';
-import profilepic from '../assets/karan.jpg';
+import profilepic from '../assets/1212.jpg';
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 
