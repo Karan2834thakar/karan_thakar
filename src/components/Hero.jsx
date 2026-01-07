@@ -79,7 +79,7 @@ const Hero = () => {
         >
           <div className='flex justify-center'>
             <motion.img
-              className='rounded-full'
+              className='rounded-full w-56 h-56 md:w-72 md:h-72 lg:w-96 lg:h-96 object-cover'
               src={profilepic}
               alt="karan"
               variants={imageVariants}
@@ -95,6 +95,4 @@ const Hero = () => {
 };
 
 export default Hero;
-
-
 

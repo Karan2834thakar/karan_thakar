@@ -28,7 +28,7 @@ const Technologies = () => {
       viewport={{ once: false, amount: 0.3 }}
     >
       <h2 className="my-20 text-center text-4xl">Technologies</h2>
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+      <div className="grid grid-cols-5 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
         {[ 
           { Icon: RiReactjsLine, color: 'text-cyan-400' },
           { Icon: FaNodeJs, color: 'text-green-500' },
@@ -43,13 +43,13 @@ const Technologies = () => {
         ].map(({ Icon, color }, index) => (
           <motion.div
             key={index}
-            className="flex justify-center items-center rounded-2xl border-4 border-neutral-800 p-4"
+            className="flex justify-center items-center rounded-2xl border-4 border-neutral-800 p-2 sm:p-3"
             variants={iconVariants}
             whileHover="hover"
             initial="hidden"
             animate="visible"
           >
-            <Icon className={`text-7xl ${color}`} />
+            <Icon className={`text-2xl sm:text-3xl md:text-4xl lg:text-6xl ${color}`} />
           </motion.div>
         ))}
       </div>

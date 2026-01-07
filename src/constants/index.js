@@ -19,5 +19,14 @@ export const EXPERIENCE = [
     period: "January 2025 – March 2025", // update if months differ
     technologies: ["MongoDB", "Express.js", "React", "Node.js"],
     description: `Completed a 3-month full stack development internship focused on building scalable web applications using the MERN stack. Worked on both front-end and back-end components, contributed to real-world projects, and gained hands-on experience in collaborative software development practices.`,
+  },
+  {
+    role: "Online Internship",
+    company: "Infolabz Technologies",
+    location: "Ahemdabad, Gujarat",
+    duration: "1 Months",
+    period: "", // update if months differ
+    technologies: ["MongoDB", "Express.js", "React", "Node.js"],
+    description: `Completed a mini full stack deCompleted a 1-month virtual full-stack development internship, gaining hands-on experience in designing, developing, and deploying end-to-end web applications.velopment internship focused on building scalable web applications using the MERN stack. Worked on both front-end and back-end components, contributed to real-world projects, and gained hands-on experience in collaborative software development practices.`,
   }
 ];

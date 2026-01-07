@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import aboutimg from '../assets/about me.jpg';
 import { ABOUT_TEXT } from '../constants';
@@ -33,7 +33,7 @@ const About = () => {
           variants={imageVariants}
         >
           <div className="flex items-center justify-center">
-            <img className="rounded-3xl" src={aboutimg} alt="about me" />
+            <img className="rounded-3xl w-64 h-72 md:w-80 md:h-96 lg:w-full lg:h-auto object-cover" src={aboutimg} alt="about me" />
           </div>
         </motion.div>
 
@@ -42,14 +42,38 @@ const About = () => {
           className="w-full lg:w-1/2"
           variants={textVariants}
         >
-          <div className="flex items-center justify-center lg:justify-start">
-            <p className="mt-32 my-2 max-w-xl py-6 font-light tracking-tighter">
-              {ABOUT_TEXT}
-            </p>
-          </div>
+          <AboutText />
         </motion.div>
       </div>
     </motion.div>
+  );
+};
+
+const AboutText = () => {
+  const [expanded, setExpanded] = useState(false);
+
+  return (
+    <div className="flex items-center justify-center lg:justify-start">
+      <div className="mt-32 my-2 max-w-xl py-6 font-light tracking-tighter w-full">
+        <div
+          className={`text-neutral-200 overflow-hidden transition-[max-height] duration-300 ease-in-out ${
+            expanded ? 'max-h-96' : 'max-h-28'
+          } md:max-h-none`}
+        >
+          <p className="whitespace-pre-line">{ABOUT_TEXT}</p>
+        </div>
+
+        <div className="mt-3 text-right md:hidden">
+          <button
+            onClick={() => setExpanded((s) => !s)}
+            className="text-sm text-blue-400"
+            aria-expanded={expanded}
+          >
+            {expanded ? 'Read Less' : 'Read More'}
+          </button>
+        </div>
+      </div>
+    </div>
   );
 };
 
