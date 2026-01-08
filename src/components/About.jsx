@@ -26,20 +26,24 @@ const About = () => {
       <h2 className="my-20 text-center text-4xl">
         About <span className="text-neutral-500">Me</span>
       </h2>
-      <div className="flex flex-wrap">
+      <div className="flex flex-wrap items-stretch">
         {/* Left Section - Animated Image */}
         <motion.div
-          className="w-full lg:w-1/2 lg:p-8"
+          className="w-full lg:w-1/2 lg:p-8 flex items-center justify-center"
           variants={imageVariants}
         >
-          <div className="flex items-center justify-center">
-            <img className="rounded-3xl w-64 h-72 md:w-80 md:h-96 lg:w-full lg:h-auto object-cover" src={aboutimg} alt="about me" />
+          <div className="flex items-center justify-center w-full">
+              <img
+                className="rounded-3xl w-40 h-44 md:w-56 md:h-64 lg:w-64 lg:h-72 object-cover block mb-0"
+                src={aboutimg}
+                alt="about me"
+              />
           </div>
         </motion.div>
 
         {/* Right Section - Animated Text */}
         <motion.div
-          className="w-full lg:w-1/2"
+          className="w-full lg:w-1/2 flex items-center"
           variants={textVariants}
         >
           <AboutText />
@@ -54,7 +58,7 @@ const AboutText = () => {
 
   return (
     <div className="flex items-center justify-center lg:justify-start">
-      <div className="mt-32 my-2 max-w-xl py-6 font-light tracking-tighter w-full">
+    <div className="mt-32 my-2 max-w-xl py-4 font-light tracking-tighter w-full">
         <div
           className={`text-neutral-200 overflow-hidden transition-[max-height] duration-300 ease-in-out ${
             expanded ? 'max-h-96' : 'max-h-28'

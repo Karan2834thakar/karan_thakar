@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { HERO_CONTENT } from '../constants';
-import profilepic from '../assets/1212.jpg';
+import profilepic from '../assets/kk.jpg';
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 
@@ -78,15 +78,18 @@ const Hero = () => {
           transition={{ duration: 1 }}
         >
           <div className='flex justify-center'>
-            <motion.img
-              className='rounded-full w-56 h-56 md:w-72 md:h-72 lg:w-96 lg:h-96 object-cover'
-              src={profilepic}
-              alt="karan"
-              variants={imageVariants}
-              initial="hidden"
-              animate={isImageInView ? "visible" : "exit"}
-              transition={{ duration: 1, delay: 0.2 }}
-            />
+            <div className='rounded-none w-56 h-56 md:w-72 md:h-72 lg:w-96 lg:h-96 overflow-hidden'>
+              <motion.img
+                className='w-full h-full object-cover'
+                style={{ objectPosition: 'center 30%' }}
+                src={profilepic}
+                alt="karan"
+                variants={imageVariants}
+                initial="hidden"
+                animate={isImageInView ? "visible" : "exit"}
+                transition={{ duration: 1, delay: 0.2 }}
+              />
+            </div>
           </div>
         </motion.div>
       </div>
