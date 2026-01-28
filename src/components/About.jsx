@@ -26,7 +26,7 @@ const About = () => {
       <h2 className="my-20 text-center text-4xl">
         About <span className="text-neutral-500">Me</span>
       </h2>
-      <div className="flex flex-wrap items-stretch">
+      <div className="flex flex-wrap items-center">
         {/* Left Section - Animated Image */}
         <motion.div
           className="w-full lg:w-1/2 lg:p-8 flex items-center justify-center"
@@ -58,7 +58,7 @@ const AboutText = () => {
 
   return (
     <div className="flex items-center justify-center lg:justify-start">
-    <div className="mt-32 my-2 max-w-xl py-4 font-light tracking-tighter w-full">
+    <div className="my-2 max-w-xl py-4 font-light tracking-tighter w-full">
         <div
           className={`text-neutral-200 overflow-hidden transition-[max-height] duration-300 ease-in-out ${
             expanded ? 'max-h-96' : 'max-h-28'
