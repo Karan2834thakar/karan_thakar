@@ -29,4 +29,13 @@ export const EXPERIENCE = [
     technologies: ["MongoDB", "Express.js", "React", "Node.js"],
     description: `Completed a mini full stack deCompleted a 1-month virtual full-stack development internship, gaining hands-on experience in designing, developing, and deploying end-to-end web applications.velopment internship focused on building scalable web applications using the MERN stack. Worked on both front-end and back-end components, contributed to real-world projects, and gained hands-on experience in collaborative software development practices.`,
   }
+  {
+    role: "Full stack Developer",
+    company: "Teqto Infotech & Aurum X Technologies",
+    location: "Rajkot, Gujarat",
+    duration: "Currently Working",
+    period: "", // update if months differ
+    technologies: ["MERN","MEAN","NEXT","NEST","php","Laravel","AI-Automation"],
+    description: `Completed a mini full stack deCompleted a 1-month virtual full-stack development internship, gaining hands-on experience in designing, developing, and deploying end-to-end web applications.velopment internship focused on building scalable web applications using the MERN stack. Worked on both front-end and back-end components, contributed to real-world projects, and gained hands-on experience in collaborative software development practices.`,
+  }
 ];
