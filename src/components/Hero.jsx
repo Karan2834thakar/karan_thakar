@@ -1,101 +1,62 @@
-
 import React from 'react';
+import { motion } from 'framer-motion';
 import { HERO_CONTENT } from '../constants';
-import profilepic from '../assets/kk.jpg';
-import { motion, useInView } from 'framer-motion';
-import { useRef } from 'react';
+import heroImg from '../assets/karan-hero.jpg';
 
 const Hero = () => {
-  // Refs for the sections
-  const textRef = useRef(null);
-  const imageRef = useRef(null);
-
-  // Detect if the sections are in view
-  const isTextInView = useInView(textRef, { threshold: 0.2 });
-  const isImageInView = useInView(imageRef, { threshold: 0.2 });
-
-  // Animation variants for text and image
-  const textVariants = {
-    hidden: { x: -200, opacity: 0 },
-    visible: { x: 0, opacity: 1 },
-    exit: { x: -200, opacity: 0 },
-  };
-
-  const imageVariants = {
-    hidden: { x: 200, opacity: 0 },
-    visible: { x: 0, opacity: 1 },
-    exit: { x: 200, opacity: 0 },
-  };
-
   return (
-    <div className='border-b border-neutral-900 pb-4 lg:mb-34'>
-      <div className='flex flex-wrap'>
-        {/* Left Section - Animated Text */}
-        <motion.div
-          ref={textRef}
-          className='w-full lg:w-1/2'
-          variants={textVariants}
-          initial="hidden"
-          animate={isTextInView ? "visible" : "exit"}
-          transition={{ duration: 1 }}
-        >
-          <div className='flex flex-col items-center lg:items-start'>
-            <motion.h1
-              className='pb-16 text-6xl font-thin tracking-tight lg:mt-16 lg:text-8xl'
-              variants={textVariants}
-              initial="hidden"
-              animate={isTextInView ? "visible" : "exit"}
-              transition={{ duration: 1, delay: 0.2 }}
-            >
-              Karan Thakar
-            </motion.h1>
-            <motion.span
-              whileHover={{ scale: 1.2 }}
-              whileTap={{ scale: 1.1 }}
-              className='bg-gradient-to-r from-pink-300 via-slate-500 to-purple-500 bg-clip-text text-4xl tracking-tight text-transparent'
-            >
-              Full Stack Developer
-            </motion.span>
-            <motion.p
-              className='my-2 max-w-xl py-6 font-light tracking-tighter'
-              variants={textVariants}
-              initial="hidden"
-              animate={isTextInView ? "visible" : "exit"}
-              transition={{ duration: 1, delay: 0.4 }}
-            >
-              {HERO_CONTENT}
-            </motion.p>
-          </div>
-        </motion.div>
-
-        {/* Right Section - Animated Profile Picture */}
-        <motion.div
-          ref={imageRef}
-          className='w-full lg:w-1/2 lg:p-8'
-          variants={imageVariants}
-          initial="hidden"
-          animate={isImageInView ? "visible" : "exit"}
-          transition={{ duration: 1 }}
-        >
-          <div className='flex justify-center'>
-            <div className='rounded-none w-56 h-56 md:w-72 md:h-72 lg:w-96 lg:h-96 overflow-hidden'>
-              <motion.img
-                className='w-full h-full object-cover'
-                style={{ objectPosition: 'center 30%' }}
-                src={profilepic}
-                alt="karan"
-                variants={imageVariants}
-                initial="hidden"
-                animate={isImageInView ? "visible" : "exit"}
-                transition={{ duration: 1, delay: 0.2 }}
-              />
-            </div>
-          </div>
-        </motion.div>
+    <section id="home" className="relative min-h-[100svh] w-full overflow-hidden">
+      {/* Portrait — right column on desktop, full-bleed on mobile.
+          Displayed smaller than native (1252×1280) so it stays sharp,
+          object-top keeps the head fully in frame. */}
+      <div className="absolute inset-y-0 right-0 w-full md:w-[52%]">
+        <img
+          src={heroImg}
+          alt="Karan Thakar"
+          className="h-full w-full object-cover object-[60%_top] grayscale"
+        />
+        {/* fade the image's left edge into the background so the name reads */}
+        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/30 to-transparent md:via-background/10" />
       </div>
-    </div>
+
+      {/* bottom + left legibility wash */}
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-background via-background/30 to-transparent md:via-transparent" />
+
+      {/* Top meta */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1, delay: 0.2 }}
+        className="absolute left-6 top-28 flex items-center gap-3 text-xs uppercase tracking-[0.3em] text-foreground/70 md:left-10 md:top-32"
+      >
+        <span className="h-2 w-2 rounded-full bg-foreground" />
+        Available for work
+      </motion.div>
+
+      {/* Headline block, lower-left */}
+      <div className="absolute inset-x-0 bottom-0 px-6 pb-16 md:px-10 md:pb-20">
+        <div className="mx-auto max-w-7xl">
+          <motion.h1
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: 'easeOut' }}
+            className="font-display text-hero"
+          >
+            Karan Thakar
+          </motion.h1>
+
+          <motion.p
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.5, ease: 'easeOut' }}
+            className="mt-6 max-w-xl text-sm font-light leading-relaxed text-foreground/80 md:text-base"
+          >
+            {HERO_CONTENT}
+          </motion.p>
+        </div>
+      </div>
+    </section>
   );
 };
 
 export default Hero;
-

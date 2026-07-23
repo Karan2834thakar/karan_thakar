@@ -1,11 +1,137 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Martel+Sans:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-body {
-  background-color: black;
-  color: white  ;
-}
+
 :root {
-  font-family: "Inter", sans-serif;
+  /* Semantic design tokens (HSL channels) */
+  --background: 0 0% 4%;
+  --foreground: 0 0% 96%;
+  --muted: 0 0% 45%;
+  --border: 0 0% 15%;
+
+  font-family: 'Inter', sans-serif;
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* Thin dark scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: hsl(var(--background));
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(0 0% 20%);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(0 0% 30%);
+}
+
+::selection {
+  background: hsl(var(--foreground));
+  color: hsl(var(--background));
+}
+
+@layer components {
+  .font-display {
+    font-family: 'Bebas Neue', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+    line-height: 0.85;
+    font-weight: 400;
+  }
+
+  /* Responsive vertical rhythm: 8 / 12 / 16 rem */
+  .section-padding {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+  @media (min-width: 768px) {
+    .section-padding {
+      padding-top: 12rem;
+      padding-bottom: 12rem;
+    }
+  }
+  @media (min-width: 1024px) {
+    .section-padding {
+      padding-top: 16rem;
+      padding-bottom: 16rem;
+    }
+  }
+
+  /* Editorial imagery: grayscale that resolves to colour on hover */
+  .img-editorial {
+    filter: grayscale(100%);
+    transition: filter 600ms ease;
+  }
+  .img-editorial:hover {
+    filter: grayscale(0%);
+  }
+}
+
+/* Analog film-grain overlay */
+.grain-overlay {
+  position: fixed;
+  inset: -150%;
+  z-index: 9998;
+  pointer-events: none;
+  opacity: 0.035;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  animation: grain 8s steps(10) infinite;
+}
+
+@keyframes grain {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  10% {
+    transform: translate(-5%, -10%);
+  }
+  20% {
+    transform: translate(-15%, 5%);
+  }
+  30% {
+    transform: translate(7%, -25%);
+  }
+  40% {
+    transform: translate(-5%, 25%);
+  }
+  50% {
+    transform: translate(-15%, 10%);
+  }
+  60% {
+    transform: translate(15%, 0%);
+  }
+  70% {
+    transform: translate(0%, 15%);
+  }
+  80% {
+    transform: translate(3%, -15%);
+  }
+  90% {
+    transform: translate(-10%, 10%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .grain-overlay {
+    animation: none;
+  }
+  html {
+    scroll-behavior: auto;
+  }
 }
