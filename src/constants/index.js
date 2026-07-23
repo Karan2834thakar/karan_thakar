@@ -1,41 +1,58 @@
+export const HERO_CONTENT = `I am a Full Stack Developer who builds scalable, production-grade web applications with the MERN stack and Laravel. I specialize in REST API design, real-time systems, AI automation workflows, and cloud infrastructure on GCP and BigQuery. I care deeply about clean architecture and solving real-world problems efficiently — turning complex requirements into reliable, well-crafted products.`;
 
+export const ABOUT_TEXT = `I am a Full Stack Developer with hands-on experience shipping production-grade applications across the MERN stack, Next.js, and Laravel. My work spans real-time systems built on WebSockets and Redis pub/sub, REST API design, AI automation workflows using n8n and GoHighLevel, and cloud analytics on GCP and BigQuery.
 
-export const HERO_CONTENT = `I am a passionate full stack developer with a knack for crafting robust and scalable web applications. With hands-on experience, I have honed my skills in front-end technologies like React ,HTML ,CSS and JS, as well as back-end technologies like Node.js,Exprss.js, MySQL, and MongoDB. My goal is to leverage my expertise to create innovative solutions that drive business growth and deliver exceptional user experiences.`;
-
-export const ABOUT_TEXT = `I am a dedicated and versatile full stack developer with a passion for creating efficient and user-friendly web applications. My journey in web development began with a deep curiosity for how things work, and it has evolved into a career where I continuously strive to learn and adapt to new challenges.I have worked with a variety of technologies, including React, Node.js, Express.js, MySQL, and MongoDB. I thrive in collaborative environments and enjoy solving complex problems to deliver high-quality solutions. Outside of coding, I enjoy staying active, exploring new technologies, and contributing to open-source projects.I am constantly learning and staying up-to-date with the latest technologies to enhance my development skills. I am passionate about problem-solving and enjoy collaborating on innovative projects that challenge me to grow.`;
-
+My journey in software began with a curiosity for how things work under the hood and has grown into a craft where I continuously learn and adapt. I have delivered client projects end to end — from responsive UIs and custom dashboards to authentication, third-party integrations, and deployments on Vercel, Netlify, and cPanel. I thrive in fast-paced, collaborative environments and enjoy breaking down complex problems into clean, maintainable solutions.`;
 
 export const CONTACT = {
-  address: "Gujarat,India ",
-  
+  address: "Gujarat, India",
+  phone: "+91-9426386272",
   email: "karanthakar2834@gmail.com",
 };
+
 export const EXPERIENCE = [
   {
-    role: "Full Stack Development Intern",
-    company: "Milliard InfoWord",
+    role: "Full Stack & AI/ML Developer",
+    company: "Teqto Infotech & Aurm X Technologies",
     location: "Rajkot, Gujarat",
-    duration: "3 Months",
-    period: "January 2025 – March 2025", // update if months differ
-    technologies: ["MongoDB", "Express.js", "React", "Node.js"],
-    description: `Completed a 3-month full stack development internship focused on building scalable web applications using the MERN stack. Worked on both front-end and back-end components, contributed to real-world projects, and gained hands-on experience in collaborative software development practices.`,
+    duration: "6 months",
+    period: "Feb 2026 – Jul 2026",
+    technologies: ["MERN", "Laravel", "n8n", "GoHighLevel", "REST APIs", "AI Automation"],
+    description: `Developed and deployed scalable web applications using the MERN stack and Laravel in a fast-paced product environment. Built AI automation workflows with n8n and GoHighLevel (GHL) for client-facing business process automation, and designed and integrated REST APIs that improved system performance and inter-service communication.`,
   },
   {
-    role: "Online Internship",
-    company: "Infolabz Technologies",
-    location: "Ahemdabad, Gujarat",
-    duration: "1 Months",
-    period: "", // update if months differ
-    technologies: ["MongoDB", "Express.js", "React", "Node.js"],
-    description: `Completed a mini full stack deCompleted a 1-month virtual full-stack development internship, gaining hands-on experience in designing, developing, and deploying end-to-end web applications.velopment internship focused on building scalable web applications using the MERN stack. Worked on both front-end and back-end components, contributed to real-world projects, and gained hands-on experience in collaborative software development practices.`,
-  }
+    role: "Freelance Full Stack Developer",
+    company: "Self-Employed",
+    location: "Remote",
+    duration: "1 year",
+    period: "2025 – 2026",
+    technologies: ["MERN", "Laravel", "Vercel", "Netlify", "cPanel", "Authentication"],
+    description: `Delivered client projects end to end using MERN and Laravel, shipping responsive, production-ready UIs and custom dashboards. Integrated third-party APIs, authentication systems, and automation workflows, and managed deployments across Vercel, Netlify, and cPanel.`,
+  },
   {
-    role: "Full stack Developer",
-    company: "Teqto Infotech & Aurum X Technologies",
+    role: "Full Stack Developer Intern",
+    company: "Milliard InfoWorld",
     location: "Rajkot, Gujarat",
-    duration: "Currently Working",
-    period: "", // update if months differ
-    technologies: ["MERN","MEAN","NEXT","NEST","php","Laravel","AI-Automation"],
-    description: `Completed a mini full stack deCompleted a 1-month virtual full-stack development internship, gaining hands-on experience in designing, developing, and deploying end-to-end web applications.velopment internship focused on building scalable web applications using the MERN stack. Worked on both front-end and back-end components, contributed to real-world projects, and gained hands-on experience in collaborative software development practices.`,
-  }
+    duration: "Internship",
+    period: "",
+    technologies: ["MongoDB", "Express.js", "React", "Node.js"],
+    description: `Built and optimized full stack applications using the MERN stack, working on API integrations and database design while contributing to real-world projects and collaborative development practices.`,
+  },
+  {
+    role: "React Intern (Mini Internship)",
+    company: "INFOLABZ IT Services Pvt. Ltd.",
+    location: "Ahmedabad, Gujarat",
+    duration: "Mini Internship",
+    period: "",
+    technologies: ["React.js", "JavaScript", "HTML5", "CSS3"],
+    description: `Developed responsive UI components using React.js, gaining hands-on experience in building clean, reusable front-end interfaces.`,
+  },
 ];
+
+export const EDUCATION = {
+  degree: "B.E. in Information Technology",
+  institution: "V.V.P. Engineering College",
+  university: "Gujarat Technological University (GTU)",
+  period: "2022 – 2026",
+  score: "CGPA: 8.74",
+};

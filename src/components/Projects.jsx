@@ -19,46 +19,60 @@ const Projects = () => {
 
   const projects = [
     {
-      title: 'Gate Pass Management System',
+      title: 'LiveBid – Real-Time Live Auction Platform',
       description:
-        'A comprehensive full-stack Gate Pass Management System built with React.js, Node.js, Express, and MongoDB. Features QR-based verification, role-based access control, approval workflows, and real-time notifications.',
-      liveUrl: 'https://github.com/Karan2834thakar/GatePass_System.git',
-      sourceCodeUrl: 'https://github.com/Karan2834thakar/GatePass_System.git',
+        'A full-scale live auction platform with real-time bidding powered by Redis pub/sub and WebSockets. Architected as microservices with a Python FastAPI backend, PostgreSQL for persistence, and Docker for containerized deployment.',
+      technologies: ['Next.js', 'PostgreSQL', 'Redis', 'Docker', 'FastAPI'],
+      liveUrl: 'https://github.com/Karan2834thakar',
+      sourceCodeUrl: 'https://github.com/Karan2834thakar',
     },
     {
-      title: 'Quizii - AI-Powered Quiz Arena',
+      title: 'SnapContest – Photography Contest Platform',
       description:
-        'Quizii is a real-time, interactive quiz platform that combines the excitement of live multiplayer competition with the power of Generative AI. Host engaging quizzes, compete with friends, and let AI generate unique questions on the fly.',
+        'A community photography contest platform with image uploads, like-based voting, and leaderboard rankings. Integrated Google and Facebook OAuth for authentication and built a hidden admin panel for contest and content management.',
+      technologies: ['Next.js', 'OAuth', 'MySQL', 'Admin Dashboard'],
+      liveUrl: 'https://github.com/Karan2834thakar',
+      sourceCodeUrl: 'https://github.com/Karan2834thakar',
+    },
+    {
+      title: 'BuildMeasure – 3D Construction Measurement & Estimator',
+      description:
+        'A tool that parses uploaded architectural drawings to calculate floor area, building measurements, and material quantities. Renders interactive 3D building models with Three.js from 2D design inputs stored in PostgreSQL.',
+      technologies: ['React.js', 'Three.js', 'PostgreSQL', 'Python'],
+      liveUrl: 'https://github.com/Karan2834thakar',
+      sourceCodeUrl: 'https://github.com/Karan2834thakar',
+    },
+    {
+      title: 'Business Intelligence Dashboard & Atlas AI Calling Agent',
+      description:
+        'Cloud-powered dashboards with GCP/BigQuery analytics paired with an AI calling agent that automates booking flows and call logs via GoHighLevel and n8n.',
+      technologies: ['GCP', 'BigQuery', 'n8n', 'GoHighLevel'],
+      liveUrl: 'https://github.com/Karan2834thakar',
+      sourceCodeUrl: 'https://github.com/Karan2834thakar',
+    },
+    {
+      title: 'License & Validity Management System',
+      description:
+        'A SaaS-style subscription tracker with role-based access control (Admin / Manager / User), automated validity alerts, and audit logs.',
+      technologies: ['Laravel', 'MySQL', 'RBAC'],
+      liveUrl: 'https://github.com/Karan2834thakar',
+      sourceCodeUrl: 'https://github.com/Karan2834thakar',
+    },
+    {
+      title: 'Laravel CMS with Hidden Admin Dashboard',
+      description:
+        'A production website with a route-protected admin panel for full content and image management, deployed on Hostinger via cPanel.',
+      technologies: ['Laravel', 'PHP', 'MySQL', 'cPanel'],
+      liveUrl: 'https://github.com/Karan2834thakar',
+      sourceCodeUrl: 'https://github.com/Karan2834thakar',
+    },
+    {
+      title: 'Quizii – Real-Time AI Quiz Platform',
+      description:
+        'A multiplayer quiz engine with WebSocket real-time sync and AI-generated dynamic question sets, combining live competition with the power of Generative AI.',
+      technologies: ['React', 'Node.js', 'Socket.io', 'AI APIs'],
       liveUrl: 'https://quizii-kohl.vercel.app/',
       sourceCodeUrl: 'https://github.com/Karan2834thakar/quizii.git',
-    },
-    {
-      title: 'Job Application Portal',
-      description:
-        'A MERN stack-based JOB Application Portal that streamlines job applications, resume uploads, and lets companies view and manage applications seamlessly.',
-      liveUrl: 'https://github.com/Karan2834thakar/job-application-portal.git',
-      sourceCodeUrl: 'https://github.com/Karan2834thakar/job-application-portal.git',
-    },
-    {
-      title: 'QP-Predictor: AI-Powered Question Paper Prediction',
-      description:
-        'A MERN stack-based system that analyzes previous year papers using AI & NLP to predict potential exam questions.',
-      liveUrl: 'https://qp-murex.vercel.app/',
-      sourceCodeUrl: 'https://github.com/Karan2834thakar/QP.git',
-    },
-    {
-      title: 'CrickBid – Tournament & Scoring System',
-      description:
-        'A MERN stack-based platform for managing cricket tournaments with team auctions, match scheduling, and live scoring.',
-      liveUrl: 'https://github.com/Karan2834thakar/Cricket.git',
-      sourceCodeUrl: 'https://github.com/Karan2834thakar/Cricket.git',
-    },
-    {
-      title: 'SOEN: AI-Powered Project Management Platform',
-      description:
-        'A full-stack platform for project creation, collaboration, AI-assisted coding, and server management.',
-      liveUrl: 'https://github.com/Karan2834thakar/SOEN.git',
-      sourceCodeUrl: 'https://github.com/Karan2834thakar/SOEN.git',
     },
   ];
 
