@@ -16,7 +16,7 @@ export const EXPERIENCE = [
     company: "Teqto Infotech & Aurm X Technologies",
     location: "Rajkot, Gujarat",
     duration: "6 months",
-    period: "Feb 2026 – Jul 2026",
+    period: "Feb 2026 – Currently Working",
     technologies: ["MERN", "Laravel", "n8n", "GoHighLevel", "REST APIs", "AI Automation"],
     description: `Developed and deployed scalable web applications using the MERN stack and Laravel in a fast-paced product environment. Built AI automation workflows with n8n and GoHighLevel (GHL) for client-facing business process automation, and designed and integrated REST APIs that improved system performance and inter-service communication.`,
   },
